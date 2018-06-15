@@ -1,0 +1,16 @@
+body {
+	background-color: coral;
+	color: blanchedalmond;
+	font-size: 16pt;
+	}
+#game {
+	text-align: center;
+	border: 2px solid blanchedalmond;
+    }
+.header {
+	background-color: blanchedalmond;
+	color: coral;
+	text-align: center;
+	margin-top: 20px;
+	padding: 30px;
+	}

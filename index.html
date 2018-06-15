@@ -5,65 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Psychic Game</title>
+    <link rel="stylesheet" href="assests/css/style.css">
 </head>
 <body>
-    <header><h1>Guess what letter I'm thinking of!</h1></header>
-	<div id="game">
-		
-	</div>
-	<style>
-			body {
-				background-color: coral;
-				color: blanchedalmond;
-				font-size: 16pt;
-			}
-			#game {
-				text-align: center;
-				border: 2px solid blanchedalmond;
-			}
-			header {
-				background-color: blanchedalmond;
-				color: coral;
-				text-align: center;
-				margin-top: 20px;
-				padding: 30px;
-			}
-		</style>
-
-    <script type="text/javascript">
-        var wins = 0;
-        var losses = 0;
-        var guessesLeft = 8;
-        var guess = []
-        var computerChoices = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-        
-        document.onkeyup = function(event) {
-
-        var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-
-        console.log(wins)
-        console.log(losses)
-        console.log(guessesLeft)
-        console.log(computerGuess)
-        
-        if (guess === computerGuess) {
-            wins++
-        }
-        else {
-            guessesLeft--
-        }
-        if (guessesLeft === 0) {
-            losses++
-        }
-
-        var html =
-            "<p>Wins: " + wins + "<p>"
-            "<p>Losses: " + losses + "</p>" +
-            "<p>Guesses Left: " + guessesLeft + "</p>" +
-            "<p>Guesses so far: " + guess + "</p>";
-        
-        var html = document.querySelector("#game").innerHTML;
-    }
-    </script>
+    <div class="row header">
+        <h1>Guess what letter I'm thinking of!</h1></div>
+	<div class="row" id="game">
+		<div id="guess">
+        </div>
+    </div>
+    <script src="assests/javascript/game.js"></script>
 </body>
 </html>
