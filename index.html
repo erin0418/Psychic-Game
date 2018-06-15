@@ -7,18 +7,37 @@
     <title>Psychic Game</title>
 </head>
 <body>
-    <div id="game">
-    Guess what letter I am thinking of:
-    </div>
+    <header><h1>Guess what letter I'm thinking of!</h1></header>
+	<div id="game">
+		
+	</div>
+	<style>
+			body {
+				background-color: coral;
+				color: blanchedalmond;
+				font-size: 16pt;
+			}
+			#game {
+				text-align: center;
+				border: 2px solid blanchedalmond;
+			}
+			header {
+				background-color: blanchedalmond;
+				color: coral;
+				text-align: center;
+				margin-top: 20px;
+				padding: 30px;
+			}
+		</style>
 
-    <script>
-        document.onkeyup = function(event) {
-
+    <script type="text/javascript">
         var wins = 0;
         var losses = 0;
         var guessesLeft = 8;
-        var guess = event.key;
+        var guess = []
         var computerChoices = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+        
+        document.onkeyup = function(event) {
 
         var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
